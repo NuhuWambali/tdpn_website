@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- CSS here -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -25,6 +26,25 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+    .p11{
+        display: none!important;
+    }
+    @media (max-width: 768px) { /* Adjust max-width as needed */
+      .p10 {
+          display: none !important;
+      }
+      .p11 {
+          display: block !important;
+      }
+      .phone{
+   display: none;
+  }
+  .cal-btn{
+    display: none;
+  }
+  }
+</style>
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -42,43 +62,8 @@
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header ">
-                <div class="header-top d-none d-lg-block">
-                    <div class="container-fluid">
-                        <div class="col-xl-12">
-                            <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left d-flex">
-                                    <ul>     
-                                        <li>Phone: +255 654 623 717</li>
-                                        <li>Email: drugpreventiontanzania@gmail.com</li>
-                                    </ul>
-                                    <div class="header-social">    
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="header-info-right d-flex align-items-center">
-                                    <div class="select-this">
-                                        <form action="#">
-                                            <div class="select-itms">
-                                                <select name="select" id="select1">
-                                                    <option value="">English</option>
-                                                    <option value="">Swahili</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <ul class="contact-now">     
-                                        <li><a href="#">Subscribe Now</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
+                
                 <div class="header-bottom  header-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
@@ -112,7 +97,7 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <button type="button" class="btn header-btn text-white" data-bs-toggle="modal" data-bs-target="#donateModal">Donate</b>
                                     </div>
                                 </div>
                             </div> 
@@ -139,14 +124,15 @@
                         <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
                             <div class="hero__caption">
                                 <h1 data-animation="fadeInUp" data-delay=".6s">Building a Drug Free Tanzania</h1>
-                                <P data-animation="fadeInUp" data-delay=".8s" >We emphasizes the commitment to eradicating drug abuse and its associated challenges in
+                                <P class="p10" data-animation="fadeInUp" data-delay=".8s" >We emphasizes the commitment to eradicating drug abuse and its associated challenges in
                                     Tanzania. It reflects a vision of a healthier, more productive society where individuals, especially the youth, can thrive without 
                                     the negative impact of substance abuse.We underscores the importance of collective responsibility in fostering awareness, 
                                     prevention, and rehabilitation efforts, aiming to secure a brighter 
                                     future for current and upcoming generations</P>
+                                    <P class="p11" data-animation="fadeInUp" data-delay=".8s" >We aim to eradicate drug abuse in Tanzania, promoting awareness, prevention, and rehabilitation for a healthier, brighter future.</P>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn">
-                                    <a href="industries.html" class="btn hero-btn hello-btn1 mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#donateModal" class="btn hero-btn hello-btn1 mb-10 text-white"  data-animation="fadeInLeft" data-delay=".8s">Donate</button>
                                     <a href="industries.html" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
                                         <i class="flaticon-null"></i>
                                         <p class="phone"> +255 718 891 232</p>
@@ -606,13 +592,45 @@
         </div>
     </footer>
 
+
+
+    <!-- donate modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title text-white" id="donateModalLabel">Support Our Cause</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <p class="lead">Your support helps us make a difference. Consider donating to our cause to help us achieve more!</p>
+              <div class="mt-4">
+                <h6 class="text-uppercase">Bank Account Details</h6>
+                <p class="mb-1"><strong>Bank Name:</strong> ABC Bank</p>
+                <p class="mb-1"><strong>Account Name:</strong> Our Organization</p>
+                <p class="mb-1"><strong>Account Number:</strong> 123456789</p>
+                <p class="mb-1"><strong>SWIFT Code:</strong> ABCD1234</p>
+              </div>
+              <div class="mt-4">
+                <p>Every contribution matters. Thank you for your generosity!</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     <!-- Scroll Up -->
     <div id="back-top" >
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
     <!-- JS here -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
