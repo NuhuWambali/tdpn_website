@@ -3495,7 +3495,7 @@ hr {
 
 /* line 18, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_h1-hero.scss */
 .slider-height2 {
-  height: 365px;
+  height: 200px;
   background-size: cover;
 }
 
@@ -8344,3 +8344,7 @@ del {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+    .active{
+        color:red!important;
+    }
