@@ -3926,6 +3926,14 @@ hr {
   transition: 0.4s;
   position: relative;
   z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+
+.service-area .single-cat:hover{
+    transform: translateY(-5px); /* Slightly lifts the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 575px) {
